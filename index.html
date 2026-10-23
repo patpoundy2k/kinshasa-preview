@@ -630,7 +630,7 @@ var I18N = {
     overlayClouds: "Nuages (NASA, quasi temps réel)",
     flightsToggle: "✈ Vols",
     flightsNone: "Aucun avion suivi pour le moment (couverture limitée autour de Kinshasa).",
-    flightsNote: "Données de vol : adsb.lol — ADS-B communautaire (ODbL). Vols en direct — Congo Airways (COG), Ethiopian (ETH), Air France (AFR), Brussels Airlines (BEL). Couverture limitée autour de Kinshasa : l'absence d'avion ne signifie pas l'absence de vol.",
+    flightsNote: "Données de vol : adsb.lol et OpenSky — ADS-B communautaire (ODbL). Vols en direct — Congo Airways (COG), Ethiopian (ETH), Air France (AFR), Brussels Airlines (BEL). Couverture limitée autour de Kinshasa : l'absence d'avion ne signifie pas l'absence de vol.",
     airportLabel: "Aéroport de N'djili (FIH)",
     fihTitle: "Aéroport de N'djili (FIH) — départs et arrivées du jour",
     fihDepartures: "Départs",
@@ -736,7 +736,7 @@ var I18N = {
     overlayClouds: "Clouds (NASA, near-live)",
     flightsToggle: "✈ Flights",
     flightsNone: "No tracked flights right now (limited coverage around Kinshasa).",
-    flightsNote: "Flight data: adsb.lol — community ADS-B (ODbL). Live flights — Congo Airways (COG), Ethiopian (ETH), Air France (AFR), Brussels Airlines (BEL). Coverage around Kinshasa is sparse: no aircraft shown does not mean no flight is operating.",
+    flightsNote: "Flight data: adsb.lol & OpenSky — community ADS-B (ODbL). Live flights — Congo Airways (COG), Ethiopian (ETH), Air France (AFR), Brussels Airlines (BEL). Coverage around Kinshasa is sparse: no aircraft shown does not mean no flight is operating.",
     airportLabel: "N'djili Airport (FIH)",
     fihTitle: "N'djili Airport (FIH) — today's departures & arrivals",
     fihDepartures: "Departures",
@@ -960,7 +960,7 @@ var darkActive = themeIsDark();
 var MAP_STYLE_LIGHT = 'https://tiles.openfreemap.org/styles/liberty';
 var baseMode = 'plan';      /* 'plan' = OpenFreeMap vector style | 'sat' = Esri raster */
 var cloudsOn = false;
-var secondaryOn = true;     /* baked secondary/tertiary roads overlay (data block may be empty) */
+var secondaryOn = false;    /* baked secondary/tertiary traffic overlay — OFF by default (Pat, 2026-10-23) */
 var flightsOn = false;      /* live flight layer (enableFlights/disableFlights below) */
 var mapReady = false;
 var styleLayerIds = [];
